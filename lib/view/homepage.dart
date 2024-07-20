@@ -12,7 +12,6 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   String selected = "All Products";
-  RangeValues slidervalue = RangeValues(1, 10000);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -79,6 +78,29 @@ class _HomepageState extends State<Homepage> {
                       color: Colors.grey,
                     ),
                   )
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: DropdownButton(
+                value: selected,
+                onChanged: (val) {
+                  setState(() {
+                    selected = val.toString();
+                  });
+                },
+                items: [
+                  const DropdownMenuItem(
+                    value: 'All Products',
+                    child: Text('All Products'),
+                  ),
+                  ...allCategory.map((e) {
+                    return DropdownMenuItem(
+                      child: Text(e.tcase),
+                      value: e,
+                    );
+                  }),
                 ],
               ),
             ),

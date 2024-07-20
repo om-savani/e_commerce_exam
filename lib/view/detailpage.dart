@@ -96,7 +96,7 @@ class _DetailPageState extends State<Detailpage> {
                               decoration: TextDecoration.lineThrough,
                               color: Colors.grey),
                         ),
-                        Spacer(),
+                        const Spacer(),
                       ],
                     ),
                     1.toHeight(),

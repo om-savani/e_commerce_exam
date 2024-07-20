@@ -179,7 +179,7 @@ class _CartPageState extends State<CartPage> {
                                           ],
                                         ),
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
                                       Container(
                                         decoration: BoxDecoration(
                                           borderRadius:
@@ -293,10 +293,10 @@ class _CartPageState extends State<CartPage> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text('Buy Cart'),
+                        child: const Text('Buy Cart'),
                         style: const ButtonStyle(),
                       ),
                     ],
